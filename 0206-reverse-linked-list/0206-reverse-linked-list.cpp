@@ -10,23 +10,15 @@
  */
 class Solution {
 public:
-    ListNode* reverseList(ListNode* head) {
-        if (!head || !head->next)
-        return head;
-    ListNode* cur = head;
-    ListNode* rev = head;
-    ListNode* temp = head;
-    cur = cur->next;
-    temp->next = NULL;
-    
-    while (cur)
-    {
-        rev = cur;
-        cur = cur->next;
-        rev->next = temp;
-        temp = rev;
-    }
+    ListNode* reverse_recursion(ListNode* head, ListNode* newHead) {
+    if (!head)
+        return newHead;
+    ListNode* next = head->next;
+    head->next = newHead;
+    return reverse_recursion(next, head);
+}
 
-    return rev;
-    }
+ListNode* reverseList(ListNode* head) {
+    return reverse_recursion(head, NULL);
+}
 };
