@@ -30,6 +30,6 @@ int minimizeMax(vector<int>& nums, int p) {
             left = mid + 1;
     }
 
-    return right;
+    return left;
 }
 };
