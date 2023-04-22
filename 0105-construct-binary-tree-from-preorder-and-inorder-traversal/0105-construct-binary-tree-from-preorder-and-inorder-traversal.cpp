@@ -11,34 +11,34 @@
  */
 class Solution {
 public:
-    unordered_set<int> visTree;
-TreeNode* dfsToBuildTree(int preStart, int inStart, int inEnd, vector<int>& pre, vector<int>& in) {
-    if (inStart >= inEnd || preStart >= pre.size())
-        return NULL;
-
-    while (visTree.count(pre[preStart]))
-    {
-        preStart++;
-    }
-    TreeNode* root = new TreeNode(pre[preStart]);
-    visTree.insert(pre[preStart]);
-    if (inEnd - inStart == 1)
+    int preIndex = 0;
+    
+    TreeNode* buildTreeUtil(vector<int>& preorder, vector<int>& inorder, int is, int ie){
+        if(is > ie)
+            return NULL;
+        
+        TreeNode* root = new TreeNode(preorder[preIndex]);
+        preIndex++;
+        
+        
+        int inIndex;
+        for(int i=is; i<=ie; i++){
+            if(inorder[i] == root->val){
+                inIndex = i;
+                break;
+            }
+        }
+        
+        root->left = buildTreeUtil(preorder, inorder, is, inIndex-1);
+        root->right = buildTreeUtil(preorder, inorder, inIndex+1, ie);
+        
         return root;
-    int idx = 0;
-    for (idx = inStart; idx < inEnd; idx++) {
-        if (pre[preStart] == in[idx])
-            break;
+        
     }
-    preStart++;
-    root->left = dfsToBuildTree(preStart, inStart, idx, pre, in);
-    if (!root->left) preStart--;
-    root->right = dfsToBuildTree(preStart+1, idx+1, inEnd, pre, in);
-
-    return root;
-}
-
-TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder) {
-    return dfsToBuildTree(0, 0, inorder.size(), preorder, inorder);
-}
+    
+    TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder) {
+        TreeNode* ans = buildTreeUtil(preorder, inorder, 0, inorder.size()-1);
+        return ans;
+    }
 
 };
