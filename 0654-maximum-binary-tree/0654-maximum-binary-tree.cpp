@@ -15,7 +15,7 @@ public:
     if (st > end || st >= nums.size() || end < 0)
         return NULL;
     int indx = st;
-    for (int i = st; i <= end; i++) {
+    for (int i = st+1; i <= end; i++) {
         if (nums[i] > nums[indx])
             indx = i;
     }
