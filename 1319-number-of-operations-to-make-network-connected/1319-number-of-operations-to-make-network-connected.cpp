@@ -14,11 +14,11 @@ int makeConnected_union(vector<int>& parent, vector<int>& rank, int u, int v) {
     if (u == v) return 0;
 
     if (rank[u] > rank[v]) {
-        parent[u] = v;
+        parent[v] = u;
         rank[u] += rank[v];
     }
     else {
-        parent[v] = u;
+        parent[u] = v;
         rank[v] += rank[u];
     }
     
