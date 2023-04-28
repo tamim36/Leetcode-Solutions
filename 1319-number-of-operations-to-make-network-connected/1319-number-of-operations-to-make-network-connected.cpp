@@ -1,47 +1,34 @@
 class Solution {
 public:
-    int makeConnected_find(vector<int>& parent, int u) {
-    if (parent[u] == u)
-        return u;
+    int makeConnected_helperDfs(vector<vector<int>>& graph, vector<int>& vis, int node) {
+    if (vis[node]) return 0;
 
-    return parent[u] = makeConnected_find(parent, parent[u]);
-}
-
-int makeConnected_union(vector<int>& parent, vector<int>& rank, int u, int v) {
-    u = makeConnected_find(parent, u);
-    v = makeConnected_find(parent, v);
-
-    if (u == v) return 0;
-
-    if (rank[u] > rank[v]) {
-        parent[v] = u;
-        rank[u] += rank[v];
+    vis[node] = 1;
+    for (int i = 0; i < graph[node].size(); i++) {
+        makeConnected_helperDfs(graph, vis, graph[node][i]);
     }
-    else {
-        parent[u] = v;
-        rank[v] += rank[u];
-    }
-    
+
     return 1;
 }
 
 int makeConnected(int n, vector<vector<int>>& connections) {
     if (connections.size() < n - 1) return -1;
-    vector<int> parent(n, 0), rank(n, 0);
+    vector<int> vis(n, 0);
+    vector<vector<int>> graph(n);
     int component = 0;
-
-    for (int i = 0; i < n; i++) {
-        rank[i] = 1;
-        parent[i] = i;
-    }
 
     for (auto& edge : connections) {
         int u = edge[0];
         int v = edge[1];
 
-        component += makeConnected_union(parent, rank, u, v);
+        graph[u].push_back(v);
+        graph[v].push_back(u);
     }
 
-    return n - component - 1;
+    for (int i = 0; i < n; i++) {
+        component += makeConnected_helperDfs(graph, vis, i);
+    }
+
+    return component - 1;
 }
 };
