@@ -12,7 +12,7 @@ int makeConnected_union(vector<int>& parent, vector<int>& rank, int u, int v) {
     v = makeConnected_find(parent, v);
 
     if (u == v) return 0;
-    cout << rank[u] << "  " << rank[v] << endl;
+    //cout << rank[u] << "  " << rank[v] << endl;
     if (rank[u] > rank[v]) {
         parent[v] = u;
         rank[u]++;
