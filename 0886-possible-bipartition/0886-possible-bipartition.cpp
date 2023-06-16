@@ -1,8 +1,21 @@
 class Solution {
 public:
-    bool possibleBipartition(int n, vector<vector<int>>& dislikes) {
-        vector<int> color(n+1, 0);
-    vector<vector<int>> edges(n+1);
+    bool dfsIsPossibleBipartition(vector<int>& color, vector<vector<int>>& graph, int cur, int col) {
+    color[cur] = col;
+    for (int i = 0; i < graph[cur].size(); i++) {
+        if (!color[graph[cur][i]] &&
+            !dfsIsPossibleBipartition(color, graph, graph[cur][i], -col))
+            return false;
+        else if (color[graph[cur][i]] != -col)
+            return false;
+    }
+
+    return true;
+}
+
+bool possibleBipartition(int n, vector<vector<int>>& dislikes) {
+    vector<int> color(n + 1, 0);
+    vector<vector<int>> edges(n + 1);
     queue<int> q;
 
     for (auto dis : dislikes) {
@@ -11,20 +24,10 @@ public:
     }
 
     for (int i = 1; i < n + 1; i++) {
-        if (!color[i]) { q.push(i); color[i] = 1; }
-
-        while (!q.empty()) {
-            int cur = q.front(); q.pop();
-            int cur_col = color[cur];
-
-            for (int j = 0; j < edges[cur].size(); j++) {
-                int child = edges[cur][j];
-                if (!color[child]) { q.push(child); color[child] = -cur_col; }
-                else if (cur_col == color[child]) return false;
-            }
-        }
+        if (!color[i] && !dfsIsPossibleBipartition(color, edges, i, 1))
+            return false;
     }
 
     return true;
-    }
+}
 };
