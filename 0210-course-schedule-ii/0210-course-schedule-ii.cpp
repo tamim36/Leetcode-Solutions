@@ -1,31 +1,40 @@
 class Solution {
 public:
-    vector<int> findOrder(int n, vector<vector<int>>& prerequisites) {
-    vector<int> indg(n, 0);
+    bool dfsFindOrder(int n, vector<vector<int>>& adj, stack<int>& stk,
+                vector<int>& vis, vector<int>& curPath, int cur) {
+    if (curPath[cur]) return false;
+    if (vis[cur]) return true;
+
+    curPath[cur] = vis[cur] = 1;
+    for (int i = 0; i < adj[cur].size(); i++) {
+        if (!dfsFindOrder(n, adj, stk, vis, curPath, adj[cur][i]))
+            return false;
+    }
+    
+    stk.push(cur);
+    curPath[cur] = 0;
+    return true;
+}
+
+vector<int> findOrder(int n, vector<vector<int>>& prerequisites) {
+    vector<int> vis(n, 0), curPath(n, 0);
     vector<vector<int>> adj(n);
-    queue<int> q;
+    stack<int> stk;
 
-    for (auto v : prerequisites) {
+    for (auto v : prerequisites)
         adj[v[1]].push_back(v[0]);
-        indg[v[0]]++;
-    }
 
-    for (int i = 0; i < n; i++)
-        if (!indg[i]) q.push(i);
-
-    int cnt = 0;
     vector<int> ans;
-    vector<int> emptyVec;
-    while (!q.empty()) {
-        int cur = q.front(); q.pop();
-        ans.push_back(cur);
-        indg[cur]--; cnt++;
-
-        for (auto neigh : adj[cur])
-            if (!--indg[neigh])
-                q.push(neigh);
+    for (int i = 0; i < n; i++) {
+        if (!vis[i] && !dfsFindOrder(n, adj, stk, vis, curPath, i))
+            return ans;
     }
 
-    return cnt == n ? ans : emptyVec;
+    while (!stk.empty()) {
+        ans.push_back(stk.top());
+        stk.pop();
+    }
+
+    return ans;
 }
 };
