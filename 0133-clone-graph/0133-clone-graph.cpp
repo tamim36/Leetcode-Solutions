@@ -21,40 +21,32 @@ public:
 
 class Solution {
 public:
-    Node* cloneGraph(Node* node) {
-        if (!node)
+    void dfs_toCloneGraph(Node* node, Node* root, unordered_map<int, Node*>& mp) {
+    if (!node || node->neighbors.empty())
+        return;
+        
+    for (Node* neigh : node->neighbors) {
+        if (!mp.count(neigh->val)) {
+            Node* newNode = new Node(neigh->val);
+            mp[newNode->val] = newNode;
+            root->neighbors.push_back(newNode);
+            dfs_toCloneGraph(neigh, newNode, mp);
+        }
+        else
+            root->neighbors.push_back(mp[neigh->val]);
+    }
+}
+
+Node* cloneGraph(Node* node) {
+    if (!node)
         return node;
     Node* root = new Node(node->val);
     if (node->neighbors.empty())
         return root;
-        //cout << "root: " << root->val << endl;
-    queue<Node*> q, nq;
+
     unordered_map<int, Node*> mp;
     mp[root->val] = root;
-    q.push(node);
-    nq.push(root);
-
-    while (!q.empty())
-    {
-        Node* top = q.front(); q.pop();
-        Node* newTop = nq.front(); nq.pop();
-        //cout << "print: " << newTop->val << endl;
-
-        for (Node* neigh : top->neighbors) {
-            if (!mp.count(neigh->val)) {
-                Node* newNode = new Node(neigh->val);
-                mp[newNode->val] = newNode;
-                //cout << "newtop: " << newTop->val << " newNode: " << newNode->val << endl;
-                newTop->neighbors.push_back(newNode);
-                q.push(neigh);
-                nq.push(newNode);
-            }
-            else {
-                newTop->neighbors.push_back(mp[neigh->val]);
-            }
-        }
-    }
-
+    dfs_toCloneGraph(node, root, mp);
     return root;
-    }
+}
 };
