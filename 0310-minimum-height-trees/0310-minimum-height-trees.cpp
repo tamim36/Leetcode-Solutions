@@ -1,48 +1,35 @@
 class Solution {
 public:
-    vector<int> findMinHeightTrees(int n, vector<vector<int>>& edges) {
-        if (n == 1) return { 0 };
-        vector<int> indg(n, 0);
-    vector<vector<int>> adj(n);
-    queue<int> q;
-    int cnt = n;
+    vector<int> dfs_findMHT(vector<vector<int>>& graph, vector<bool>& vis, int cur) {
+    vector<int> longestPath, path;
+    vis[cur] = true;
 
-    for (auto edge : edges) {
-        int a = edge[0], b = edge[1];
-        indg[a]++, indg[b]++;
-        adj[a].push_back(b);
-        adj[b].push_back(a);
-    }
+    for (auto adj : graph[cur])
+        if (!vis[adj])
+            if (size(path = dfs_findMHT(graph, vis, adj)) > size(longestPath))
+                longestPath = move(path);
 
-    for (int i = 0; i < n; i++) {
-        if (indg[i] == 1) {
-            q.push(i);
-        }
-    }
+    vis[cur] = false;
+    longestPath.push_back(cur);
+    return longestPath;
+}
 
-    vector<int> ans;
-    while (!q.empty()) {
-        int sz = q.size();
-        if (cnt <= 2) {
-                while (!q.empty())
-                {
-                    ans.push_back(q.front()); q.pop();
-                }
-                break;
-            }
-        
-        for (int i = 0; i < sz; i++) {
-            int top = q.front(); q.pop();
-            cnt--;
-            
-            for (auto node : adj[top]) {
-                if (--indg[node] == 1)
-                    q.push(node);
-            }
-        }
-        
-    }
+vector<int> findMinHeightTrees(int n, vector<vector<int>>& edges) {
+    vector<int> vec;
+    int sz = vec.size();
+    int sz1 = size(vec);
+    if (n == 1) return { 0 };
+    vector<vector<int>> graph(n);
+    vector<bool> vis(n);
 
-    return ans;
-    }
+    for (auto edge : edges)
+        graph[edge[0]].push_back(edge[1]),
+        graph[edge[1]].push_back(edge[0]);
+
+    auto path = dfs_findMHT(graph, vis, dfs_findMHT(graph, vis, 0)[0]);
+    if (size(path) % 2)
+        return { path[size(path) / 2] };
+
+    return {path[size(path)/2], path[size(path)/2 - 1]};
+}
 };
