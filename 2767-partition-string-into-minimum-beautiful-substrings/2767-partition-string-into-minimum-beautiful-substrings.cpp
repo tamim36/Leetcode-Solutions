@@ -9,7 +9,7 @@ public:
             size_t pos = s.find(pats[i]);
 
             if (pos != string::npos && (pos == 0 || s[pos-1] != '0')) {
-                s.replace(s.find(pats[i]), pats[i].length(), "2");
+                s.replace(pos, pats[i].length(), "2");
                 cnt++;
             }
             else 
