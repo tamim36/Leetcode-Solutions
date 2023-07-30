@@ -10,15 +10,18 @@
  */
 class Solution {
 public:
-    ListNode* reverse_recursion(ListNode* head, ListNode* newHead) {
-    if (!head)
-        return newHead;
-    ListNode* next = head->next;
-    head->next = newHead;
-    return reverse_recursion(next, head);
-}
+    ListNode* reverseList(ListNode* head) {
+        ListNode* cur = head;
+    ListNode* prev = NULL;
+    ListNode* temp = head;
 
-ListNode* reverseList(ListNode* head) {
-    return reverse_recursion(head, NULL);
-}
+    while (cur) {
+        temp = cur->next;
+        cur->next = prev;
+        prev = cur;
+        cur = temp;
+    }
+
+    return prev;
+    }
 };
