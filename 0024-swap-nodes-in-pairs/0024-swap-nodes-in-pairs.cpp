@@ -10,25 +10,25 @@
  */
 class Solution {
 public:
-    ListNode* swapPairs(ListNode* head) {
-        ListNode* newHead = new ListNode(0);
+    ListNode* swapTwoNodes(ListNode* node1, ListNode* node2) {
+    node1->next = node1->next->next;
+    node2->next = node1;
+    return node2;
+}
+
+ListNode* swapPairs(ListNode* head) {
+    ListNode* newHead = new ListNode(0);
     newHead->next = head;
 
     ListNode* cur = newHead;
 
     while (cur && cur->next && cur->next->next)
     {
-        auto temp = cur->next; // 1
-
-        cur->next = cur->next->next;
-        temp->next = cur->next->next;
-        auto temp2 = cur->next;
-        temp2->next = temp;
-        cur->next = temp2;
+        cur->next = swapTwoNodes(cur->next, cur->next->next);
         cur = cur->next->next;
     }
 
 
     return newHead->next;
-    }
+}
 };
