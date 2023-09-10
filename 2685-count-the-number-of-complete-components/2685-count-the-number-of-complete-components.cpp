@@ -1,7 +1,21 @@
 class Solution {
 public:
-    int countCompleteComponents(int n, vector<vector<int>>& edges) {
-        vector<vector<int>> adj(n);
+    void dfsCountCompleteComponents(vector<vector<int>>& graph, int cur, vector<int>& vis, int &node, int &edge) {
+    if (vis[cur]) return;
+
+    vis[cur] = 1;
+    node++;
+    edge += graph[cur].size();
+
+    for (auto neigh : graph[cur]) {
+        if (vis[neigh]) continue;
+
+        dfsCountCompleteComponents(graph, neigh, vis, node, edge);
+    }
+}
+
+int countCompleteComponents(int n, vector<vector<int>>& edges) {
+    vector<vector<int>> adj(n);
     vector<int> vis(n, 0);
 
     for (auto edge : edges) {
@@ -13,33 +27,13 @@ public:
     int cnt = 0;
 
     for (int i = 0; i < n; i++) {
-        if (!vis[i]) {
-            q.push(i);
-            vis[i] = 1;
-            int con_nodes = adj[i].size();
-            bool is_connected = true;
-            int num_of_nodes = 0;
-
-            while (!q.empty())
-            {
-                int cur = q.front(); q.pop();
-                num_of_nodes++;
-
-                if (is_connected && adj[cur].size() != con_nodes)
-                    is_connected = false;
-
-                for (auto nei : adj[cur]) {
-                    if (!vis[nei]) {
-                        q.push(nei);
-                        vis[nei] = 1;
-                    }
-                }
-            }
-            if (num_of_nodes - 1 == con_nodes && is_connected)
-                cnt++;
-        }
+        if (vis[i])
+            continue;
+        int node = 0, edge = 0;
+        dfsCountCompleteComponents(adj, i, vis, node, edge);
+        cnt += node * (node - 1) == edge;
     }
 
     return cnt;
-    }
+}
 };
