@@ -1,33 +1,26 @@
 class Solution {
 public:
-    vector<vector<int>> permute(vector<int>& nums) {
-        int sz = nums.size();
-vector<vector<int>> ans;
-if (sz <= 1) {
-    ans.push_back(nums);
+    void recursePermute(vector<int>& sofar, vector<int>& nums, vector<vector<int>>& ans, int sz) {
+    if (sz == sofar.size()) {
+        ans.push_back(sofar);
+        return;
+    }
+
+    for (int i = 0; i < nums.size(); i++) {
+        sofar.push_back(nums[i]);
+        vector<int> new_choices(nums);
+        new_choices.erase(new_choices.begin() + i);
+
+        recursePermute(sofar, new_choices, ans, sz);
+
+        sofar.pop_back();
+    }
+}
+
+vector<vector<int>> permute(vector<int>& nums) {
+    vector<vector<int>> ans;
+    vector<int> sofar;
+    recursePermute(sofar, nums, ans, nums.size());
     return ans;
 }
-
-vector<int> vec;
-vec.push_back(nums[0]);
-ans.push_back(vec);
-
-
-for (int i = 1; i < sz; i++) {
-    vector<vector<int>> tmp;
-    while (!ans.empty()){
-        auto v = ans.back();
-        ans.pop_back();
-
-        for (int j = 0; j <= i; j++) {
-            vector<int> vt(v);
-            vt.insert(vt.begin() + j, nums[i]);
-            tmp.push_back(vt);
-        }
-    }
-    ans = tmp;
-}
-
-return ans;
-    }
 };
