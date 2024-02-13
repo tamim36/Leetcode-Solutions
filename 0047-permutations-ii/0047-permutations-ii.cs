@@ -1,36 +1,32 @@
-public class Solution {
-    public IList<IList<int>> PermuteUnique(int[] nums)
-{
-    IList<IList<int>> res = new List<IList<int>>();
-    recur_permuteUnique(res, 0, nums);
-    return res;
-}
-
-private void recur_permuteUnique(IList<IList<int>> res, int idx, int[] nums)
-{
-    if (idx == nums.Length)
-    {
-        res.Add(nums.ToList());
+class Solution {
+public:
+    void recur_permuteUnique(unordered_map<int, int>& umap, vector<vector<int>>& ans, vector<int>& soFar, int n) {
+    if (soFar.size() == n) {
+        ans.push_back(soFar);
         return;
     }
 
-    ISet<int> visited = new HashSet<int>();
-    for (int i = idx; i < nums.Length; i++)
-    {
-        if (!visited.Add(nums[i]))
-        {
-            continue;
-        }
+    for (auto &kvp : umap) {
+    if (!kvp.second)
+        continue;
 
-        var tmp = nums[idx];
-        nums[idx] = nums[i];
-        nums[i] = tmp;
-
-        recur_permuteUnique(res, idx + 1, nums);
-
-        tmp = nums[idx];
-        nums[idx] = nums[i];
-        nums[i] = tmp;
-    }
+    kvp.second--;
+    soFar.push_back(kvp.first);
+    recur_permuteUnique(umap, ans, soFar, n);
+    kvp.second++;
+    soFar.pop_back();
 }
 }
+
+vector<vector<int>> permuteUnique(vector<int>& nums) {
+    unordered_map<int, int> umap;
+    for (auto num : nums)
+        umap[num]++;
+
+    vector<vector<int>> ans;
+    vector<int> soFar;
+    recur_permuteUnique(umap, ans, soFar, nums.size());
+
+    return ans;
+}
+};
