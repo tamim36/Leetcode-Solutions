@@ -6,7 +6,7 @@ var permuteUnique = function(nums) {
     let data = []
     function _permute(curr, remaining){
         if (!remaining.length){
-            data.push(curr)
+            data.push([...curr])
             return
         }
 
@@ -18,7 +18,7 @@ var permuteUnique = function(nums) {
             else {
                 uniques.add(remaining[i])
                 curr.push(remaining[i])
-                _permute([...curr], [...remaining.slice(0, i), ...remaining.slice(i+1)])
+                _permute(curr, [...remaining.slice(0, i), ...remaining.slice(i+1)])
                 curr.pop()
             }
         }
