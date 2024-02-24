@@ -12,12 +12,7 @@ for (auto str : strs) {
 
 vector<vector<string>> ans;
 for (auto kvp : mp) {
-
-    vector<string> group;
-    for (auto anagram : kvp.second) {
-        group.push_back(anagram);
-    }
-    ans.push_back(group);
+    ans.push_back(kvp.second);
 }
 
 return ans;
