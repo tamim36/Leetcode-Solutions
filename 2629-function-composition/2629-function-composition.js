@@ -3,12 +3,11 @@
  * @return {Function}
  */
 var compose = function(functions) {
-    return function(inp) {
-        return functions.reduceRight((acc, func) => {
-            acc = func(acc)
-            return acc
-        }, inp);
-    }
+  return functions.reduceRight(function(prevFn, nextFn) {
+    return function(x) {
+      return nextFn(prevFn(x));
+    };
+  },  function(x) { return x; });
 };
 
 /**
