@@ -32,6 +32,6 @@ int kthLargestPerfectSubtree(TreeNode* root, int k) {
 
     int val = dfs_khLargestPerfectSubtree(root, values);
     sort(values.begin(), values.end(), greater<int>());
-    return k > values.size() ? -1 : values[k-1];
+    return k > values.size() ? -1 : values[k - 1];
 }
 };
