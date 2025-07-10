@@ -20,6 +20,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [2265-partition-array-according-to-given-pivot](https://github.com/tamim36/Leetcode-Solutions/tree/master/2265-partition-array-according-to-given-pivot) |
+| [2305-append-k-integers-with-minimal-sum](https://github.com/tamim36/Leetcode-Solutions/tree/master/2305-append-k-integers-with-minimal-sum) |
 ## Simulation
 |  |
 | ------- |
@@ -40,4 +41,16 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [2493-reverse-odd-levels-of-binary-tree](https://github.com/tamim36/Leetcode-Solutions/tree/master/2493-reverse-odd-levels-of-binary-tree) |
+## Math
+|  |
+| ------- |
+| [2305-append-k-integers-with-minimal-sum](https://github.com/tamim36/Leetcode-Solutions/tree/master/2305-append-k-integers-with-minimal-sum) |
+## Greedy
+|  |
+| ------- |
+| [2305-append-k-integers-with-minimal-sum](https://github.com/tamim36/Leetcode-Solutions/tree/master/2305-append-k-integers-with-minimal-sum) |
+## Sorting
+|  |
+| ------- |
+| [2305-append-k-integers-with-minimal-sum](https://github.com/tamim36/Leetcode-Solutions/tree/master/2305-append-k-integers-with-minimal-sum) |
 <!---LeetCode Topics End-->
