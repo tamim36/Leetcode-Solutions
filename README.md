@@ -19,12 +19,14 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Array
 |  |
 | ------- |
+| [1525-queries-on-a-permutation-with-key](https://github.com/tamim36/Leetcode-Solutions/tree/master/1525-queries-on-a-permutation-with-key) |
 | [2265-partition-array-according-to-given-pivot](https://github.com/tamim36/Leetcode-Solutions/tree/master/2265-partition-array-according-to-given-pivot) |
 | [2305-append-k-integers-with-minimal-sum](https://github.com/tamim36/Leetcode-Solutions/tree/master/2305-append-k-integers-with-minimal-sum) |
 | [3657-check-if-grid-can-be-cut-into-sections](https://github.com/tamim36/Leetcode-Solutions/tree/master/3657-check-if-grid-can-be-cut-into-sections) |
 ## Simulation
 |  |
 | ------- |
+| [1525-queries-on-a-permutation-with-key](https://github.com/tamim36/Leetcode-Solutions/tree/master/1525-queries-on-a-permutation-with-key) |
 | [2265-partition-array-according-to-given-pivot](https://github.com/tamim36/Leetcode-Solutions/tree/master/2265-partition-array-according-to-given-pivot) |
 ## Tree
 |  |
@@ -55,4 +57,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [2305-append-k-integers-with-minimal-sum](https://github.com/tamim36/Leetcode-Solutions/tree/master/2305-append-k-integers-with-minimal-sum) |
 | [3657-check-if-grid-can-be-cut-into-sections](https://github.com/tamim36/Leetcode-Solutions/tree/master/3657-check-if-grid-can-be-cut-into-sections) |
+## Binary Indexed Tree
+|  |
+| ------- |
+| [1525-queries-on-a-permutation-with-key](https://github.com/tamim36/Leetcode-Solutions/tree/master/1525-queries-on-a-permutation-with-key) |
 <!---LeetCode Topics End-->
