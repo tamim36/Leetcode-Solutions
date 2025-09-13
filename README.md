@@ -5,6 +5,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/tamim36/Leetcode-Solutions/tree/master/0026-remove-duplicates-from-sorted-array) |
+| [0080-remove-duplicates-from-sorted-array-ii](https://github.com/tamim36/Leetcode-Solutions/tree/master/0080-remove-duplicates-from-sorted-array-ii) |
 | [0392-is-subsequence](https://github.com/tamim36/Leetcode-Solutions/tree/master/0392-is-subsequence) |
 | [2265-partition-array-according-to-given-pivot](https://github.com/tamim36/Leetcode-Solutions/tree/master/2265-partition-array-according-to-given-pivot) |
 ## String
@@ -21,6 +22,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/tamim36/Leetcode-Solutions/tree/master/0026-remove-duplicates-from-sorted-array) |
+| [0080-remove-duplicates-from-sorted-array-ii](https://github.com/tamim36/Leetcode-Solutions/tree/master/0080-remove-duplicates-from-sorted-array-ii) |
 | [1525-queries-on-a-permutation-with-key](https://github.com/tamim36/Leetcode-Solutions/tree/master/1525-queries-on-a-permutation-with-key) |
 | [2265-partition-array-according-to-given-pivot](https://github.com/tamim36/Leetcode-Solutions/tree/master/2265-partition-array-according-to-given-pivot) |
 | [2305-append-k-integers-with-minimal-sum](https://github.com/tamim36/Leetcode-Solutions/tree/master/2305-append-k-integers-with-minimal-sum) |
