@@ -37,10 +37,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Tree
 |  |
 | ------- |
+| [0341-flatten-nested-list-iterator](https://github.com/tamim36/Leetcode-Solutions/tree/master/0341-flatten-nested-list-iterator) |
 | [2493-reverse-odd-levels-of-binary-tree](https://github.com/tamim36/Leetcode-Solutions/tree/master/2493-reverse-odd-levels-of-binary-tree) |
 ## Depth-First Search
 |  |
 | ------- |
+| [0341-flatten-nested-list-iterator](https://github.com/tamim36/Leetcode-Solutions/tree/master/0341-flatten-nested-list-iterator) |
 | [2493-reverse-odd-levels-of-binary-tree](https://github.com/tamim36/Leetcode-Solutions/tree/master/2493-reverse-odd-levels-of-binary-tree) |
 ## Breadth-First Search
 |  |
@@ -69,4 +71,20 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [1525-queries-on-a-permutation-with-key](https://github.com/tamim36/Leetcode-Solutions/tree/master/1525-queries-on-a-permutation-with-key) |
+## Stack
+|  |
+| ------- |
+| [0341-flatten-nested-list-iterator](https://github.com/tamim36/Leetcode-Solutions/tree/master/0341-flatten-nested-list-iterator) |
+## Design
+|  |
+| ------- |
+| [0341-flatten-nested-list-iterator](https://github.com/tamim36/Leetcode-Solutions/tree/master/0341-flatten-nested-list-iterator) |
+## Queue
+|  |
+| ------- |
+| [0341-flatten-nested-list-iterator](https://github.com/tamim36/Leetcode-Solutions/tree/master/0341-flatten-nested-list-iterator) |
+## Iterator
+|  |
+| ------- |
+| [0341-flatten-nested-list-iterator](https://github.com/tamim36/Leetcode-Solutions/tree/master/0341-flatten-nested-list-iterator) |
 <!---LeetCode Topics End-->
