@@ -19,6 +19,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0392-is-subsequence](https://github.com/tamim36/Leetcode-Solutions/tree/master/0392-is-subsequence) |
 | [1437-minimum-insertion-steps-to-make-a-string-palindrome](https://github.com/tamim36/Leetcode-Solutions/tree/master/1437-minimum-insertion-steps-to-make-a-string-palindrome) |
+| [2867-ways-to-split-array-into-good-subarrays](https://github.com/tamim36/Leetcode-Solutions/tree/master/2867-ways-to-split-array-into-good-subarrays) |
 ## Array
 |  |
 | ------- |
@@ -28,6 +29,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1525-queries-on-a-permutation-with-key](https://github.com/tamim36/Leetcode-Solutions/tree/master/1525-queries-on-a-permutation-with-key) |
 | [2265-partition-array-according-to-given-pivot](https://github.com/tamim36/Leetcode-Solutions/tree/master/2265-partition-array-according-to-given-pivot) |
 | [2305-append-k-integers-with-minimal-sum](https://github.com/tamim36/Leetcode-Solutions/tree/master/2305-append-k-integers-with-minimal-sum) |
+| [2867-ways-to-split-array-into-good-subarrays](https://github.com/tamim36/Leetcode-Solutions/tree/master/2867-ways-to-split-array-into-good-subarrays) |
 | [3657-check-if-grid-can-be-cut-into-sections](https://github.com/tamim36/Leetcode-Solutions/tree/master/3657-check-if-grid-can-be-cut-into-sections) |
 ## Simulation
 |  |
@@ -59,6 +61,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [2305-append-k-integers-with-minimal-sum](https://github.com/tamim36/Leetcode-Solutions/tree/master/2305-append-k-integers-with-minimal-sum) |
+| [2867-ways-to-split-array-into-good-subarrays](https://github.com/tamim36/Leetcode-Solutions/tree/master/2867-ways-to-split-array-into-good-subarrays) |
 ## Greedy
 |  |
 | ------- |
