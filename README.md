@@ -46,11 +46,13 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0341-flatten-nested-list-iterator](https://github.com/tamim36/Leetcode-Solutions/tree/master/0341-flatten-nested-list-iterator) |
+| [0801-is-graph-bipartite](https://github.com/tamim36/Leetcode-Solutions/tree/master/0801-is-graph-bipartite) |
 | [1465-maximum-product-of-splitted-binary-tree](https://github.com/tamim36/Leetcode-Solutions/tree/master/1465-maximum-product-of-splitted-binary-tree) |
 | [2493-reverse-odd-levels-of-binary-tree](https://github.com/tamim36/Leetcode-Solutions/tree/master/2493-reverse-odd-levels-of-binary-tree) |
 ## Breadth-First Search
 |  |
 | ------- |
+| [0801-is-graph-bipartite](https://github.com/tamim36/Leetcode-Solutions/tree/master/0801-is-graph-bipartite) |
 | [2493-reverse-odd-levels-of-binary-tree](https://github.com/tamim36/Leetcode-Solutions/tree/master/2493-reverse-odd-levels-of-binary-tree) |
 ## Binary Tree
 |  |
@@ -93,4 +95,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0341-flatten-nested-list-iterator](https://github.com/tamim36/Leetcode-Solutions/tree/master/0341-flatten-nested-list-iterator) |
+## Union Find
+|  |
+| ------- |
+| [0801-is-graph-bipartite](https://github.com/tamim36/Leetcode-Solutions/tree/master/0801-is-graph-bipartite) |
+## Graph
+|  |
+| ------- |
+| [0801-is-graph-bipartite](https://github.com/tamim36/Leetcode-Solutions/tree/master/0801-is-graph-bipartite) |
 <!---LeetCode Topics End-->
