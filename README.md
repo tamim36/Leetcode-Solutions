@@ -14,6 +14,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0392-is-subsequence](https://github.com/tamim36/Leetcode-Solutions/tree/master/0392-is-subsequence) |
 | [1437-minimum-insertion-steps-to-make-a-string-palindrome](https://github.com/tamim36/Leetcode-Solutions/tree/master/1437-minimum-insertion-steps-to-make-a-string-palindrome) |
+| [2244-number-of-laser-beams-in-a-bank](https://github.com/tamim36/Leetcode-Solutions/tree/master/2244-number-of-laser-beams-in-a-bank) |
 ## Dynamic Programming
 |  |
 | ------- |
@@ -27,6 +28,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0080-remove-duplicates-from-sorted-array-ii](https://github.com/tamim36/Leetcode-Solutions/tree/master/0080-remove-duplicates-from-sorted-array-ii) |
 | [1009-pancake-sorting](https://github.com/tamim36/Leetcode-Solutions/tree/master/1009-pancake-sorting) |
 | [1525-queries-on-a-permutation-with-key](https://github.com/tamim36/Leetcode-Solutions/tree/master/1525-queries-on-a-permutation-with-key) |
+| [2244-number-of-laser-beams-in-a-bank](https://github.com/tamim36/Leetcode-Solutions/tree/master/2244-number-of-laser-beams-in-a-bank) |
 | [2265-partition-array-according-to-given-pivot](https://github.com/tamim36/Leetcode-Solutions/tree/master/2265-partition-array-according-to-given-pivot) |
 | [2305-append-k-integers-with-minimal-sum](https://github.com/tamim36/Leetcode-Solutions/tree/master/2305-append-k-integers-with-minimal-sum) |
 | [2867-ways-to-split-array-into-good-subarrays](https://github.com/tamim36/Leetcode-Solutions/tree/master/2867-ways-to-split-array-into-good-subarrays) |
@@ -62,6 +64,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Math
 |  |
 | ------- |
+| [2244-number-of-laser-beams-in-a-bank](https://github.com/tamim36/Leetcode-Solutions/tree/master/2244-number-of-laser-beams-in-a-bank) |
 | [2305-append-k-integers-with-minimal-sum](https://github.com/tamim36/Leetcode-Solutions/tree/master/2305-append-k-integers-with-minimal-sum) |
 | [2867-ways-to-split-array-into-good-subarrays](https://github.com/tamim36/Leetcode-Solutions/tree/master/2867-ways-to-split-array-into-good-subarrays) |
 ## Greedy
@@ -103,4 +106,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0801-is-graph-bipartite](https://github.com/tamim36/Leetcode-Solutions/tree/master/0801-is-graph-bipartite) |
+## Matrix
+|  |
+| ------- |
+| [2244-number-of-laser-beams-in-a-bank](https://github.com/tamim36/Leetcode-Solutions/tree/master/2244-number-of-laser-beams-in-a-bank) |
 <!---LeetCode Topics End-->
