@@ -6,6 +6,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/tamim36/Leetcode-Solutions/tree/master/0026-remove-duplicates-from-sorted-array) |
 | [0080-remove-duplicates-from-sorted-array-ii](https://github.com/tamim36/Leetcode-Solutions/tree/master/0080-remove-duplicates-from-sorted-array-ii) |
+| [0088-merge-sorted-array](https://github.com/tamim36/Leetcode-Solutions/tree/master/0088-merge-sorted-array) |
 | [0392-is-subsequence](https://github.com/tamim36/Leetcode-Solutions/tree/master/0392-is-subsequence) |
 | [1009-pancake-sorting](https://github.com/tamim36/Leetcode-Solutions/tree/master/1009-pancake-sorting) |
 | [2265-partition-array-according-to-given-pivot](https://github.com/tamim36/Leetcode-Solutions/tree/master/2265-partition-array-according-to-given-pivot) |
@@ -27,6 +28,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/tamim36/Leetcode-Solutions/tree/master/0026-remove-duplicates-from-sorted-array) |
 | [0080-remove-duplicates-from-sorted-array-ii](https://github.com/tamim36/Leetcode-Solutions/tree/master/0080-remove-duplicates-from-sorted-array-ii) |
+| [0088-merge-sorted-array](https://github.com/tamim36/Leetcode-Solutions/tree/master/0088-merge-sorted-array) |
 | [1009-pancake-sorting](https://github.com/tamim36/Leetcode-Solutions/tree/master/1009-pancake-sorting) |
 | [1525-queries-on-a-permutation-with-key](https://github.com/tamim36/Leetcode-Solutions/tree/master/1525-queries-on-a-permutation-with-key) |
 | [2244-number-of-laser-beams-in-a-bank](https://github.com/tamim36/Leetcode-Solutions/tree/master/2244-number-of-laser-beams-in-a-bank) |
@@ -76,6 +78,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Sorting
 |  |
 | ------- |
+| [0088-merge-sorted-array](https://github.com/tamim36/Leetcode-Solutions/tree/master/0088-merge-sorted-array) |
 | [1009-pancake-sorting](https://github.com/tamim36/Leetcode-Solutions/tree/master/1009-pancake-sorting) |
 | [2305-append-k-integers-with-minimal-sum](https://github.com/tamim36/Leetcode-Solutions/tree/master/2305-append-k-integers-with-minimal-sum) |
 | [3657-check-if-grid-can-be-cut-into-sections](https://github.com/tamim36/Leetcode-Solutions/tree/master/3657-check-if-grid-can-be-cut-into-sections) |
