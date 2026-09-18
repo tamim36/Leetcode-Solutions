@@ -18,6 +18,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1437-minimum-insertion-steps-to-make-a-string-palindrome](https://github.com/tamim36/Leetcode-Solutions/tree/master/1437-minimum-insertion-steps-to-make-a-string-palindrome) |
 | [2244-number-of-laser-beams-in-a-bank](https://github.com/tamim36/Leetcode-Solutions/tree/master/2244-number-of-laser-beams-in-a-bank) |
 | [2576-minimum-penalty-for-a-shop](https://github.com/tamim36/Leetcode-Solutions/tree/master/2576-minimum-penalty-for-a-shop) |
+| [2833-furthest-point-from-origin](https://github.com/tamim36/Leetcode-Solutions/tree/master/2833-furthest-point-from-origin) |
 ## Dynamic Programming
 |  |
 | ------- |
@@ -134,4 +135,5 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0169-majority-element](https://github.com/tamim36/Leetcode-Solutions/tree/master/0169-majority-element) |
+| [2833-furthest-point-from-origin](https://github.com/tamim36/Leetcode-Solutions/tree/master/2833-furthest-point-from-origin) |
 <!---LeetCode Topics End-->
