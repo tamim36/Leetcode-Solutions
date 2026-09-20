@@ -1,15 +1,17 @@
 class Solution {
 public:
     int removeDuplicates(vector<int>& nums) {
-        if (nums.size() <= 2)
-            return nums.size();
-        int idx = 1;
+       bool duplicateAllowed = true;
+       int left = 1, right = 1;
 
-        for (int i = 2; i < nums.size(); i++) {
-            if (nums[i] != nums[idx] || nums[i] != nums[idx - 1])
-                nums[++idx] = nums[i];
+        for (; right < nums.size(); right++){
+            nums[left] = nums[right];
+            if (nums[left] == nums[left - 1] && duplicateAllowed)
+                duplicateAllowed = false, left++;
+            else if (nums[left] != nums[left - 1])
+                duplicateAllowed = true, left++;
         }
 
-        return ++idx;
+        return left;
     }
 };
