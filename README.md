@@ -136,4 +136,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0169-majority-element](https://github.com/tamim36/Leetcode-Solutions/tree/master/0169-majority-element) |
 | [2833-furthest-point-from-origin](https://github.com/tamim36/Leetcode-Solutions/tree/master/2833-furthest-point-from-origin) |
+## Boyer–Moore Majority Vote Algorithm
+|  |
+| ------- |
+| [0169-majority-element](https://github.com/tamim36/Leetcode-Solutions/tree/master/0169-majority-element) |
 <!---LeetCode Topics End-->
